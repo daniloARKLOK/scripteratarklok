@@ -1717,13 +1717,18 @@ NOME DE QUEM ACOMPANHOU A ATIVIDADE: ${acompanhante}
             doc.setTextColor(0, 0, 0); // preto
 
             const larguraPagina = 210;
-            let yRodape = 273; // posição perto do final da página A4 (297mm)
+            let yRodape = 265; // posição perto do final da página A4 (297mm)
 
-	    
+	    	//Texto Primario
+			const textoAviso = "ESTE TÉCNICO ARKLOK NÃO ESTÁ AUTORIZADO A REALIZAR A RETIRADA DE EQUIPAMENTOS OU PERIFÉRICOS";
+			const larguraTextoAviso = doc.getTextWidth(textoAviso);
+			doc.setTextColor(200, 0, 0); // vermelho
+			doc.text(textoAviso, (larguraPagina - larguraTextoAviso) / 2, yRodape);
+
             // Texto 1
             const texto1 = "ATENDIMENTO À LGPD: AO INSERIR SEUS DADOS ACIMA, VOCÊ ESTARÁ DE ACORDO COM A UTILIZAÇÃO DE SUAS INFORMAÇÕES";
             const larguraTexto1 = doc.getTextWidth(texto1);
-            doc.text(texto1, (larguraPagina - larguraTexto1) / 2, yRodape);
+            doc.text(texto1, (larguraPagina - larguraTexto1) / 2, yRodape + 2);
 
             // Texto 2
             const texto2 = "ÚNICA E EXCLUSIVAMENTE PARA O PROCESSO DE ATENDIMENTO TÉCNICO DA ARKLOK. SEUS DADOS NÃO SERÃO PROCESSADOS E";
@@ -1759,3 +1764,4 @@ NOME DE QUEM ACOMPANHOU A ATIVIDADE: ${acompanhante}
 </body>
 
 </html>
+
