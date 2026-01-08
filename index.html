@@ -1722,30 +1722,31 @@ NOME DE QUEM ACOMPANHOU A ATIVIDADE: ${acompanhante}
 	    // Texto 1
             const texto1 = "ESTE TÉCNICO ARKLOK NÃO ESTÁ AUTORIZADO A REALIZAR A RETIRADA DE EQUIPAMENTOS OU PERIFÉRICOS";
             const larguraTexto1 = doc.getTextWidth(texto1);
+			doc.setTextColor(200, 0, 0); // vermelho
             doc.text(texto1, (larguraPagina - larguraTexto1) / 2, yRodape);		
 
             // Texto 2
-            const texto1 = "ATENDIMENTO À LGPD: AO INSERIR SEUS DADOS ACIMA, VOCÊ ESTARÁ DE ACORDO COM A UTILIZAÇÃO DE SUAS INFORMAÇÕES";
-            const larguraTexto1 = doc.getTextWidth(texto1);
-            doc.text(texto1, (larguraPagina - larguraTexto1) / 2, yRodape);
+            const texto2 = "ATENDIMENTO À LGPD: AO INSERIR SEUS DADOS ACIMA, VOCÊ ESTARÁ DE ACORDO COM A UTILIZAÇÃO DE SUAS INFORMAÇÕES";
+            const larguraTexto1 = doc.getTextWidth(texto2);
+            doc.text(texto2, (larguraPagina - larguraTexto2) / 2, yRodape);
 
             // Texto 3
-            const texto2 = "ÚNICA E EXCLUSIVAMENTE PARA O PROCESSO DE ATENDIMENTO TÉCNICO DA ARKLOK. SEUS DADOS NÃO SERÃO PROCESSADOS E";
-            const larguraTexto2 = doc.getTextWidth(texto2);
-            doc.text(texto2, (larguraPagina - larguraTexto2) / 2, yRodape + 4);
+            const texto3 = "ÚNICA E EXCLUSIVAMENTE PARA O PROCESSO DE ATENDIMENTO TÉCNICO DA ARKLOK. SEUS DADOS NÃO SERÃO PROCESSADOS E";
+            const larguraTexto3 = doc.getTextWidth(texto3);
+            doc.text(texto3, (larguraPagina - larguraTexto3) / 2, yRodape + 4);
 
             // Texto 4
-            const texto3 = "NEM DIVULGADOS PARA NENHUM OUTRO MEIO FORA O ESCLARECIDO ACIMA.";
-            const larguraTexto3 = doc.getTextWidth(texto3);
-            doc.text(texto3, (larguraPagina - larguraTexto3) / 2, yRodape + 8);
+            const texto4 = "NEM DIVULGADOS PARA NENHUM OUTRO MEIO FORA O ESCLARECIDO ACIMA.";
+            const larguraTexto4 = doc.getTextWidth(texto4);
+            doc.text(texto4, (larguraPagina - larguraTexto4) / 2, yRodape + 8);
 
             // Texto 5 (vermelho e negrito)
-            const texto4 = "Este documento é propriedade da ARKLOK, Todos os direitos são reservados";
+            const texto5 = "Este documento é propriedade da ARKLOK, Todos os direitos são reservados";
             doc.setFontSize(8);
             doc.setFont(undefined, 'normal');
             doc.setTextColor(200, 0, 0); // vermelho
-            const larguraTexto4 = doc.getTextWidth(texto4);
-            doc.text(texto4, (larguraPagina - larguraTexto4) / 2, yRodape + 13);
+            const larguraTexto5 = doc.getTextWidth(texto5);
+            doc.text(texto5, (larguraPagina - larguraTexto5) / 2, yRodape + 13);
 
             // Resetar cor para evitar afetar o restante
             doc.setTextColor(0, 0, 0);
@@ -1761,5 +1762,6 @@ NOME DE QUEM ACOMPANHOU A ATIVIDADE: ${acompanhante}
 
     </script>
 </body>
+
 
 </html>
